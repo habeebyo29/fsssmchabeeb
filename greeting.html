@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Functions</title>
+</head>
+
+<body>
+    <h1>Function Examples</h1>
+    <button onclick="greetUser()">Greet User</button>
+
+    <div id="functionOutput"></div>
+
+    <script>
+        // Basic function 
+        function greetUser(taslim) {
+            let name = prompt("what is your name?");
+            let greeting = `ASSSALAMUALAIKUM, ${name}! Welcome to JavaScript!`;
+            document.getElementById('functionOutput').innerHTML = `<p>${greeting}</p>`;
+        }
+    </script>
+</body>
+
+</html>

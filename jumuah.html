@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friday Lectures | FSSMC Mosque</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--primary:#0f5132;
+--dark:#052e1e;
+--light:#f3fbf7;
+--soft:#e1f5ec;
+--accent:#18a558;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#333;
+line-height:1.6;
+}
+
+/* HERO / HEADER */
+
+.hadith-section{
+background:linear-gradient(rgba(5,46,30,0.9),rgba(5,46,30,0.9));
+padding:60px 20px;
+text-align:center;
+color:white;
+}
+
+.hadith-section h2{
+font-size:32px;
+letter-spacing:1px;
+}
+
+/* INTRO */
+
+.intro-section{
+text-align:center;
+padding:60px 20px 20px 20px;
+max-width:800px;
+margin:auto;
+}
+
+.intro-section h1{
+font-size:34px;
+color:var(--primary);
+margin-bottom:10px;
+}
+
+.intro-section p{
+color:#555;
+}
+
+/* LECTURE GRID */
+
+.pillars-section{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+padding:40px 20px 80px 20px;
+}
+
+/* LECTURE CARD */
+
+.pillar-card{
+background:var(--light);
+border-radius:14px;
+padding:30px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+border-left:5px solid var(--accent);
+transition:0.35s;
+opacity:0;
+transform:translateY(30px);
+}
+
+.pillar-card:hover{
+transform:translateY(-8px);
+background:var(--soft);
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+.pillar-card h3{
+color:var(--primary);
+font-size:22px;
+margin-bottom:10px;
+}
+
+.pillar-card p{
+font-size:14px;
+color:#444;
+margin-bottom:20px;
+}
+
+.lecture-meta{
+font-size:14px;
+margin-bottom:15px;
+color:#065f46;
+}
+
+/* AUDIO PLAYER */
+
+.audio-container{
+display:flex;
+justify-content:center;
+}
+
+audio{
+width:100%;
+border-radius:30px;
+outline:none;
+}
+
+/* FOOTER */
+
+footer{
+background:var(--dark);
+color:white;
+text-align:center;
+padding:30px 20px;
+margin-top:40px;
+}
+
+footer strong{
+color:#7df0b4;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:600px){
+
+.intro-section h1{
+font-size:26px;
+}
+
+.hadith-section h2{
+font-size:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<section class="hadith-section">
+<h2>Weekly Friday Lectures</h2>
+</section>
+
+<!-- INTRO -->
+<section class="intro-section">
+<h1>Islamic Lecture Topics With Audio</h1>
+<p>
+Listen to our weekly Jumu’ah lecture recordings and deepen your understanding
+of Islamic faith, guidance, and community values.
+</p>
+</section>
+
+<!-- LECTURE GRID -->
+<section class="pillars-section">
+
+<div class="pillar-card">
+
+<h3>Shahada (Faith)</h3>
+
+<p>
+Topic: “Shahada.” This pillar affirms the central belief in the Oneness of Allah
+and the prophethood of Muhammad ﷺ.
+</p>
+
+<div class="lecture-meta">
+Lead Imam: <br>
+Date:
+</div>
+
+<div class="audio-container">
+<audio controls>
+<source src="" type="audio/mp3">
+</audio>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+&copy; <span id="year"></span> FSSMC Central Mosque. 
+</footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const cards = document.querySelectorAll(".pillar-card");
+
+cards.forEach((card,index)=>{
+setTimeout(()=>{
+card.style.animation="fadeUp 0.6s ease forwards";
+},index*200);
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+});
+
+</script>
+
+</body>
+</html>

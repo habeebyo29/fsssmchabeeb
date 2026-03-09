@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Special Guest Lecture | FSSMC Mosque</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--primary:#0f5132;
+--dark:#052e1e;
+--accent:#18a558;
+--light:#f4fbf7;
+--soft:#e3f5ec;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#333;
+line-height:1.6;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,var(--dark),var(--primary));
+color:white;
+text-align:center;
+padding:90px 20px;
+}
+
+.hero h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:17px;
+opacity:0.9;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:900px;
+margin:auto;
+padding:70px 20px;
+}
+
+/* LECTURE BOX */
+
+.lecture-box{
+background:var(--light);
+padding:40px;
+border-radius:14px;
+border-left:6px solid var(--accent);
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.lecture-box:hover{
+transform:translateY(-6px);
+background:var(--soft);
+}
+
+/* TITLE */
+
+.lecture-title{
+color:var(--primary);
+font-size:26px;
+margin-bottom:10px;
+}
+
+/* META */
+
+.meta{
+color:#065f46;
+font-weight:600;
+margin-bottom:15px;
+line-height:1.7;
+}
+
+/* DESCRIPTION */
+
+.description{
+color:#444;
+font-size:15px;
+margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 22px;
+background:var(--primary);
+color:white;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:var(--accent);
+}
+
+/* AUDIO */
+
+.audio-section{
+margin-top:30px;
+}
+
+.audio-section h3{
+margin-bottom:10px;
+color:var(--primary);
+}
+
+audio{
+width:100%;
+}
+
+/* FOOTER */
+
+footer{
+background:var(--dark);
+color:white;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
+
+footer strong{
+color:#7df0b4;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Special Guest Lecture</h1>
+<p>Join us for inspiring Islamic lectures from respected scholars.</p>
+
+</section>
+
+
+<!-- LECTURE -->
+
+<section class="container">
+
+<div class="lecture-box">
+
+<h2 class="lecture-title">The Importance of Tawheed</h2>
+
+
+<div class="meta">
+Guest Scholar: <br>
+Date: <br>
+Location: FSSMC Central Mosque
+</div>
+
+<p class="description">
+This special lecture discusses the importance of Tawheed (the Oneness of Allah)
+and how it forms the foundation of the Muslim faith. The guest scholar explains
+how strengthening our belief improves our worship, character, and connection
+with Allah.
+</p>
+
+<div class="audio-section">
+
+<h3>Lecture Audio</h3>
+
+<audio controls>
+<source src="/audio/guest-lecture.mp3" type="audio/mp3">
+</audio>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+&copy; <span id="year"></span> FSSMC Central Mosque.
+
+</footer>
+
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSSMC Mosque | Programs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#0f5132;
+    --dark:#052e1e;
+    --light:#f3fbf7;
+    --soft:#dff5ea;
+    --accent:#18a558;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#333;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+background:var(--dark);
+padding:18px 70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+color:white;
+font-size:22px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#7df0b4;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(rgba(5,46,30,0.85),rgba(5,46,30,0.85)),
+url('/img/fsssmc.jpn.jpeg');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:44px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+/* EVENTS */
+
+.events{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.events h2{
+text-align:center;
+color:var(--dark);
+font-size:32px;
+margin-bottom:60px;
+position:relative;
+}
+
+.events h2::after{
+content:"";
+width:70px;
+height:4px;
+background:var(--accent);
+display:block;
+margin:10px auto;
+border-radius:3px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* CARD */
+
+.card{
+background:var(--light);
+border-radius:12px;
+padding:30px;
+border-left:5px solid var(--accent);
+transition:0.35s;
+box-shadow:0 5px 18px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+background:var(--soft);
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h3{
+color:var(--primary);
+margin-bottom:12px;
+font-size:20px;
+}
+
+.card p{
+font-size:14px;
+color:#444;
+}
+
+.date{
+margin-top:12px;
+font-weight:600;
+color:var(--accent);
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:18px;
+padding:10px 20px;
+background:var(--primary);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-size:14px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:var(--accent);
+}
+
+/* FOOTER */
+
+footer{
+background:var(--dark);
+color:white;
+padding:40px 20px;
+margin-top:80px;
+}
+
+.footer-bottom{
+text-align:center;
+font-size:14px;
+border-top:1px solid rgba(255,255,255,0.2);
+padding-top:20px;
+}
+
+.footer-bottom strong{
+color:#7df0b4;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+header{
+padding:15px 25px;
+}
+
+nav a{
+margin-left:15px;
+font-size:13px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<h1>FSSMC Mosque Events</h1>
+<p>Join our Ramadan programs, Islamic lectures, and community activities.</p>
+</section>
+
+<!-- EVENTS -->
+<section class="events">
+
+<h2>Programs & Activities</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Friday Jumu’ah Prayer & Sermon</h3>
+<p>Weekly khutbah addressing faith, community guidance and contemporary issues.</p>
+<div class="date">Every Friday</div>
+<a href="/html/jumuah.html" class="btn">Learn More</a>
+</div>
+
+<div class="card">
+<h3>2026 Ramadan Programs</h3>
+<p>Discover our spiritual Ramadan schedule including tafsir, taraweeh and community iftar.</p>
+<a href="/html/event.html" class="btn">View Details</a>
+</div>
+
+<div class="card">
+<h3>Special Guest Lecture</h3>
+<p>Quarterly Islamic lectures from respected scholars and community leaders.</p>
+<div class="date">Quarterly</div>
+<a href="/html/lecture.html" class="btn">Join Lecture</a>
+</div>
+
+<div class="card">
+<h3>Qur’an Memorization</h3>
+<p>Structured Qur’an memorization program for children, youth, and adults.</p>
+<div class="date">Weekends</div>
+<a href="/html/memorization.html" class="btn">Enroll</a>
+</div>
+
+<div class="card">
+<h3>Weekly Islamic Lectures</h3>
+<p>Educational sessions discussing fiqh, hadith, and Islamic lifestyle.</p>
+<a href="/html/weekly.html" class="btn">Attend</a>
+</div>
+
+<div class="card">
+<h3> Community Outreach</h3>
+<p>Support families in need through charity programs and food distribution.</p>
+<div class="date"></div>
+<a href="/html/outreach.html" class="btn">Donate</a>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-bottom">
+&copy; <span id="year"></span> FSSMC Central Mosque. Designed by <strong>Yusuf Habeeb</strong>.
+</div>
+
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

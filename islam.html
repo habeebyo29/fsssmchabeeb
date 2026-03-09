@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Islam & Its Pillars</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== GENERAL STYLES ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9fafb;
+      color: darkgreen;
+    }
+
+    h1, h2, h3 { margin: 0; }
+    a { text-decoration: none; }
+
+    /* ===== HADITH SECTION ===== */
+    .hadith-section {
+      background: darkgreen;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease forwards;
+      border-radius: 12px;
+      margin: 1rem auto;
+      max-width: 900px;
+    }
+
+    .hadith-text {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .hadith-ref {
+      display: block;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    .hadith-section button {
+      padding: 0.8rem 1.6rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: darkgreen;
+      background: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hadith-section button:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    #functionOutput {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* ===== INTRO SECTION ===== */
+    .intro-section {
+      text-align: center;
+      padding: 2rem 1rem;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    .intro-section h1 {
+      font-size: 2.2rem;
+      color: darkgreen;
+      margin-bottom: 0.5rem;
+    }
+    .intro-section p {
+      font-size: 1rem;
+      color: #374151;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ===== NAVIGATION LINKS ===== */
+    .nav-links ul {
+      list-style: none;
+      padding: 0;
+      display: inline-flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: darkgreen;
+      padding: 0.6rem 1rem;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      background: #e0f2e9;
+    }
+
+    .nav-links a:hover {
+      background: darkgreen;
+      color: #fff;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    /* ===== PILLARS GRID ===== */
+    .pillars-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pillar-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .pillar-icon {
+      font-size: 2.5rem;
+      display: inline-block;
+      padding: 0.8rem;
+      border-radius: 50%;
+      background: darkgreen;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .pillar-card:hover .pillar-icon {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(99,102,241,0.4);
+    }
+
+    .pillar-card h3 {
+      color: darkgreen;
+      font-size: 1.3rem;
+    }
+
+    .pillar-card p {
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: darkgreen;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 2rem;
+      border-radius: 12px 12px 0 0;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+    footer a:hover { color: #d1d5db; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .pillar-card h3 { font-size: 1.2rem; }
+      .pillar-card p { font-size: 0.9rem; }
+      .intro-section h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HADITH SECTION ===== -->
+  <section class="hadith-section">
+    <p class="hadith-text">
+      "The best of you are those who learn the Qur'an and teach it." 
+      <span class="hadith-ref">— Prophet Muhammad ﷺ</span>
+    </p>
+    <button onclick="greetUser()">Greet User</button>
+    <div id="functionOutput"></div>
+
+    <script>
+      function greetUser() {
+        const name = prompt("What is your name?");
+        if(name) {
+          const greeting = `ASSALAMUALAIKUM, ${name}! Welcome to Islam World!`;
+          document.getElementById('functionOutput').innerHTML = `<p>${greeting}</p>`;
+        }
+      }
+    </script>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="intro-section">
+    <h1>Islam & Its Five Pillars</h1>
+    <p>Islam is built upon five foundational pillars that guide the spiritual and practical life of every Muslim.</p>
+  </section>
+
+  <!-- ===== NAVIGATION LINKS ===== -->
+  <section class="nav-links">
+    <ul>
+      <li><a href="/html/islam.html">🖼 Islam</a></li>
+         <li><a href="/html/prophet.html">🙏 Prayer Guide (Salah)</a></li>
+      <li><a href="https://quran.com/">📖 Qur'an</a></li>
+      <li><a href="https://www.duaandazkar.com/chapter-3-morning-azkar/">📿 Daily Azkaar</a></li>
+  </section>
+
+  <!-- ===== PILLARS GRID ===== -->
+  <section class="pillars-section">
+    <div class="pillar-card">
+      <div class="pillar-icon">🕋</div>
+      <h3>Shahada (Faith)</h3>
+      <p>Declaration of faith: “There is no god but Allah, and Muhammad is His messenger.” This pillar affirms the central belief in one God and the prophethood of Muhammad ﷺ.</p>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-icon">🙏</div>
+      <h3>Salah (Prayer)</h3>
+      <p>Performing the five daily prayers at prescribed times each day. Salah strengthens connection with Allah and provides spiritual discipline.</p>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-icon">💰</div>
+      <h3>Zakat (Charity)</h3>
+      <p>Giving a portion of wealth to the needy and less fortunate. Zakat purifies wealth and promotes social equality in the community.</p>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-icon">🌙</div>
+      <h3>Sawm (Fasting)</h3>
+      <p>Fasting during the month of Ramadan as a form of self-purification, empathy for the poor, and devotion to Allah.</p>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-icon">🕋</div>
+      <h3>Hajj (Pilgrimage)</h3>
+      <p>Making the pilgrimage to Makkah at least once in a lifetime if able. Hajj unites Muslims globally and symbolizes equality before Allah.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    &copy; <span id="year"></span> FSSMC Central Mosque. Designed by <strong>Yusuf Habeeb</strong>.
+  </footer>
+
+  <script>
+    // Animate Pillar Cards
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll('.pillar-card');
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 200);
+      });
+
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

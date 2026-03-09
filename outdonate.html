@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate | FSSMC Mosque</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--primary:#0f5132;
+--dark:#052e1e;
+--accent:#18a558;
+--light:#f3fbf7;
+--soft:#e1f5ec;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#333;
+line-height:1.6;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(rgba(5,46,30,0.9),rgba(5,46,30,0.9)),
+url('/img/donation.jpg');
+background-size:cover;
+background-position:center;
+text-align:center;
+color:white;
+padding:110px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+/* SECTION */
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:70px 20px;
+text-align:center;
+}
+
+.container h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.container p{
+max-width:700px;
+margin:auto;
+color:#555;
+margin-bottom:40px;
+}
+
+/* DONATION OPTIONS */
+
+.donate-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.donate-card{
+background:var(--light);
+padding:30px;
+border-radius:14px;
+border-left:5px solid var(--accent);
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.donate-card:hover{
+transform:translateY(-6px);
+background:var(--soft);
+}
+
+.donate-card h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+.donate-card p{
+font-size:14px;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 24px;
+background:var(--primary);
+color:white;
+text-decoration:none;
+border-radius:25px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:var(--accent);
+}
+
+/* BANK INFO */
+
+.bank{
+margin-top:50px;
+background:var(--soft);
+padding:30px;
+border-radius:12px;
+}
+
+.bank h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:var(--dark);
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+footer strong{
+color:#7df0b4;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Support Our Mosque</h1>
+
+<p>Your donation helps support charity, education, and community programs.</p>
+
+</section>
+
+<!-- DONATION -->
+
+<section class="container">
+
+<h2>Make a Donation</h2>
+
+<p>
+Your generous donations help FSSMC Mosque provide Islamic education,
+community outreach, charity programs, and support for those in need.
+</p>
+
+<div class="donate-grid">
+
+<div class="donate-card">
+<h3>Zakat</h3>
+<p>Support families in need through our mosque Zakat distribution program.</p>
+<a href="#" class="btn">Donate</a>
+</div>
+
+<div class="donate-card">
+<h3>Sadaqah</h3>
+<p>Give voluntary charity to support mosque activities and community projects.</p>
+<a href="#" class="btn">Donate</a>
+</div>
+
+<div class="donate-card">
+<h3>Ramadan Support</h3>
+<p>Help provide food packages and community iftar during Ramadan.</p>
+<a href="#" class="btn">Donate</a>
+</div>
+
+</div>
+
+<div class="bank">
+
+<h3>Bank Transfer</h3>
+
+<p>
+Bank Name: Example Bank<br>
+Account Name: FSSMC Central Mosque<br>
+Account Number: 0000000000
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+&copy; <span id="year"></span> FSSMC Central Mosque. Designed by <strong>Yusuf Habeeb</strong>.
+
+</footer>
+
+<script>
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>

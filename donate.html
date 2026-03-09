@@ -1,0 +1,190 @@
+<!-- ===== DONATE SECTION ===== -->
+<section id="donate" class="section donate-section">
+  <h2>💰 Support the Mosque | دعم المسجد</h2>
+
+  <p class="section-intro">
+    Your donation sustains worship, education, and community service.<br>
+    تساهم تبرعاتك في دعم العبادة والتعليم وخدمة المجتمع.
+  </p>
+
+  <!-- Inspiration -->
+  <div class="donation-inspiration">
+    <blockquote>
+      <p>
+        “The example of those who spend their wealth in the way of Allah is like a seed
+        that grows seven ears, in every ear a hundred grains.”
+        <br><br>
+        <span class="arabic">﴿مَثَلُ ٱلَّذِينَ يُنفِقُونَ أَمْوَٰلَهُمْ فِى سَبِيلِ ٱللَّهِ﴾</span>
+      </p>
+      <footer>📖 Qur’an – Al-Baqarah (2:261)</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        “The best charity is that which is given when one is self-sufficient,
+        and charity given secretly extinguishes Allah’s anger.”
+      </p>
+      <footer>🕌 Hadith – Bukhari & Muslim</footer>
+    </blockquote>
+  </div>
+
+  <!-- Donation Form -->
+  <form id="donation-form" class="donation-form">
+    <div class="form-group">
+      <label>Full Name | الاسم الكامل</label>
+      <input type="text" id="donor-name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email | البريد الإلكتروني</label>
+      <input type="email" id="donor-email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Donation Amount (₦) | مبلغ التبرع</label>
+      <input type="number" id="donor-amount" required>
+    </div>
+
+    <div class="form-group">
+      <label>Payment Method | طريقة الدفع</label>
+      <select id="donor-method" required>
+        <option>Bank Transfer | التحويل البنكي</option>
+        <option>Card Payment | الدفع بالبطاقة</option>
+        <option>Mobile Payment | الدفع عبر الهاتف</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Message (Optional) | رسالة</label>
+      <textarea id="donor-note" rows="4"></textarea>
+    </div>
+
+    <button type="submit">🤲 Donate Now | تبرع الآن</button>
+  </form>
+
+  <!-- Feedback -->
+  <div id="donation-feedback" class="donation-feedback"></div>
+</section>
+
+<!-- ===== STYLES ===== -->
+<style>
+  .donate-section {
+    background: linear-gradient(135deg, #0f3d2e, #145a43);
+    color: #fff;
+    padding: 4rem 1.5rem;
+    border-radius: 18px;
+    max-width: 900px;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .donate-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    text-align: center;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+  }
+
+  .donation-inspiration {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  blockquote {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #f4d03f;
+    padding: 1.2rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+  }
+
+  blockquote footer {
+    margin-top: 0.7rem;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  .arabic {
+    font-size: 1.1rem;
+    font-family: "Amiri", serif;
+  }
+
+  .donation-form {
+    background: #fff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.9rem;
+    background: #145a43;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #0f3d2e;
+  }
+
+  .donation-feedback {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+  }
+</style>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  document.getElementById("donation-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("donor-name").value;
+    const amount = document.getElementById("donor-amount").value;
+    const feedback = document.getElementById("donation-feedback");
+
+    feedback.style.display = "block";
+    feedback.style.color = "#f4d03f";
+    feedback.innerHTML = `
+    🌙 <br>
+    <strong>Jazakumullahu Khayran, ${name}!</strong><br>
+    May Allah accept your donation of ₦${amount},
+    multiply it in reward, and grant you barakah in your wealth.
+    <br><br>
+    <span style="font-size:1.2rem;">🤲 آمين</span>
+  `;
+
+    this.reset();
+  });
+</script>
